@@ -300,10 +300,11 @@
   authors: [He Jiang, Yutong Wang, Rishi Veerapaneni, Tanishq Harish Duhan, Guillaume Adrien Sartoretti, Jiaoyang Li]
   equal_contributions: [He Jiang, Yutong Wang]
   venue: ICRA
-  pages: null
+  pages: 7342-7348
   year: 2025
   thumbnail: /files/hejiang/JiangICRA25/graphical_abstract.jpg
   award: Best Paper on Multi-Robot Systems; Best Student Paper
+  doi: 10.1109/ICRA55743.2025.11127445        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
   tags: [mapf, warehouse, envopt]
   links:
     arXiv: https://arxiv.org/abs/2410.21415
@@ -319,8 +320,9 @@
   authors: [Rishi Veerapaneni, Arthur Jakobsson, Kevin Ren, Samuel Kim, Jiaoyang Li, Maxim Likhachev]
   equal_contributions: [Rishi Veerapaneni, Arthur Jakobsson]
   venue: ICRA
-  pages: null
+  pages: 10229-10236
   year: 2025
+  doi: 10.1109/ICRA55743.2025.11128836        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
   tags: [mapf]
   links:
     arXiv: https://arxiv.org/abs/2409.14491
@@ -333,6 +335,7 @@
   pages: null
   year: 2025
   award: Spotlight
+  doi:  null       # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
   tags: [mapf]
   thumbnail: /files/yoraishaoul/mmd.gif
   site: https://multi-robot-diffusion.github.io/
