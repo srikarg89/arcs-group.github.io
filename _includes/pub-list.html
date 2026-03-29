@@ -1,9 +1,11 @@
+{% if pub.site %}
+  {% assign pub_link = pub.site %}
+{% else %}
+  {% assign pub_link = "/publications/" | append: pub.key %}
+{% endif %}
+
 <li>
-    {% if pub.site %}
-        <a href="{{pub.site}}">{{pub.title}}</a>.
-    {% else %}
-        <a href="/publications/{{pub.key}}">{{pub.title}}</a>.
-    {% endif %}
+    <a href="{{pub_link}}" style="color:black">{{pub.title}}</a>.
     {% if pub.award %}
         (<b>{{pub.award}}</b>)
     {% endif %}

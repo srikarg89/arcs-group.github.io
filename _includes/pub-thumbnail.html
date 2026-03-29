@@ -4,21 +4,23 @@
   {% assign pub_link = "/publications/" | append: pub.key %}
 {% endif %}
 
-<div class="pub-item">
+<div class="pub-item pub-entry">
     <!-- Left Column - Thumbnail -->
     <div class="pub-thumbnail">
       <a href="{{ pub_link }}">
         <img src="{{ pub.thumbnail | default: '/assets/img/robot-red.png' }}"
-             alt="{{ pub.title }} thumbnail">
+             alt="{{ pub.title }} thumbnail"
+             loading="lazy"
+             decoding="async">
       </a>
     </div>
 
     <!-- Right Column - Details -->
     <div class="pub-content">
-        <h3>
-            <a href="{{ pub_link }}">{{pub.title}}</a>.
+        <h3 class="pub-title">
+            <a class="pub-title-link" href="{{ pub_link }}">{{ pub.title }}</a>.
             {% if pub.award %}
-                (<b>{{pub.award}}</b>)
+                <span class="pub-award">({{ pub.award }})</span>
             {% endif %}
         </h3>
         <p class="pub-authors">
@@ -27,14 +29,15 @@
             {% endfor %}
         </p>
         {% include pub-meta.html %}
-        {% if pub.abstract %}
-            <a href="#abstract-{{pub.key}}"
-                       class="pub-link pub-button"
-                       data-bs-toggle="collapse"
-                       aria-expanded="false"
-                       aria-controls="abstract-{{pub.key}}"> Abstract
-            </a>
-        {% endif %}
-        {% include pub-buttons.html %}
+        <div class="pub-actions">
+            {% if pub.abstract %}
+                <a href="#abstract-{{pub.key}}"
+                        class="pub-link pub-button"
+                        data-bs-toggle="collapse"
+                        aria-expanded="false"
+                        aria-controls="abstract-{{pub.key}}">Abstract</a>
+            {% endif %}
+            {% include pub-buttons.html %}
+        </div>
     </div>
 </div>
