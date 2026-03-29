@@ -15,7 +15,7 @@
 #  award: null
 #  doi: null        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
 #  publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi]
-#  tags: [mapf, warehouse, arm, traffic, execution, envopt]
+#  tags: [mapf, warehouse, arm, traffic, execution, mamp, envopt-physical, envopt-virtual]
 #  links:   # You can add additional links not listed below
 #    arXiv: null
 #    Code: null
@@ -44,7 +44,7 @@
   award: null
   doi: null        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
   publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi]
-  tags: [mapf, warehouse]
+  tags: [mamp, warehouse]
   links:   # You can add additional links not listed below
     arXiv: https://arxiv.org/abs/2510.00425
     Code: null
@@ -78,7 +78,7 @@
    year: 2024
    pages: 279-280
    url: https://doi.org/10.1609/socs.v17i1.31580
-  tags: [mapf]
+  tags: [mapf, envopt-physical]
   abstract: We use the Quality Diversity (QD) algorithm with Neural Cellular Automata (NCA) to generate benchmark maps for Multi-Agent Path Finding (MAPF) algorithms. Previously, MAPF algorithms are tested using fixed, human-designed benchmark maps. However, such fixed benchmark maps have several problems. First, these maps may not cover all the potential failure scenarios for the algorithms. Second, when comparing different algorithms, fixed benchmark maps may introduce bias leading to unfair comparisons between algorithms. Third, since researchers test new algorithms on a small set of fixed benchmark maps, the design of the algorithms may overfit to the small set of maps. In this work, we take advantage of the QD algorithm to (1) generate maps with patterns to comprehensively understand the performance of MAPF algorithms, (2) be able to make fair comparisons between two MAPF algorithms, providing further information on the selection between two algorithms and on the design of the algorithms. Empirically, we employ this technique to generate diverse benchmark maps to evaluate and compare the behavior of different types of MAPF algorithms, including search-based, priority-based, rule-based, and learning-based algorithms. Through both single-algorithm experiments and comparisons between algorithms, we identify patterns where each algorithm excels and detect disparities in runtime or success rates between different algorithms.
 
 - key: SuAAAI26
@@ -136,7 +136,7 @@
   award: null
   doi: 10.1109/MRS66243.2025.11357255  # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
   publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi] 
-  tags: [mapf, warehouse, envopt]
+  tags: [mapf, warehouse, envopt-virtual]
   links: # You can add additional links not listed below 
     arXiv: https://arxiv.org/abs/2510.03472
     Code: https://github.com/lunjohnzhang/tmo_public
@@ -157,7 +157,7 @@
   thumbnail: /files/philiphuang/mr-shortcut-compressed.gif  # Save to /files/[your-folder]/
   doi: 10.1109/IROS60139.2025.11246427        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
   publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi]
-  tags: [arm]
+  tags: [arm, mamp]
   links:   # You can add additional links not listed below
     arXiv: https://www.arxiv.org/abs/2508.05027
     Code: https://github.com/philip-huang/mr-shortcut
@@ -235,7 +235,7 @@
   year: 2025
   thumbnail: null  # Save to /files/[your-folder]/
   doi: 10.1109/IROS60139.2025.11247527        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
-  tags: [mapf]
+  tags: [mapf-policy]
   links:   # You can add additional links not listed below
     arXiv: https://arxiv.org/abs/2503.02992
     Code: null
@@ -333,7 +333,7 @@
   award: null
   doi: 10.15607/RSS.2025.XXI.098        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
   publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi]
-  tags: [arm, execution]
+  tags: [arm, mamp, execution]
   links:   # You can add additional links not listed below
     arXiv: https://arxiv.org/abs/2503.15836
     Talk: https://drive.google.com/file/d/15iYndy__BhI_r0uGmHVpnUeX8OPo3lT_/preview
@@ -357,6 +357,7 @@
 
 - key: JiangICRA25
   title: "Deploying Ten Thousand Robots: Scalable Imitation Learning for Lifelong Multi-Agent Path Finding"
+  site: https://diligentpanda.github.io/SILLM/  # project page
   authors: [He Jiang, Yutong Wang, Rishi Veerapaneni, Tanishq Harish Duhan, Guillaume Adrien Sartoretti, Jiaoyang Li]
   equal_contributions: [He Jiang, Yutong Wang]
   venue: ICRA
@@ -365,14 +366,13 @@
   thumbnail: /files/hejiang/JiangICRA25/graphical_abstract.jpg
   award: Best Paper on Multi-Robot Systems; Best Student Paper
   doi: 10.1109/ICRA55743.2025.11127445        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
-  tags: [mapf, warehouse, envopt]
+  tags: [mapf-policy, warehouse, envopt-virtual]
   links:
     arXiv: https://arxiv.org/abs/2410.21415
     Code: https://github.com/DiligentPanda/Scalable-Imitation-Learning-for-LMAPF
     Poster: null
     Slides: null
     Talk: null
-    Project: https://diligentpanda.github.io/SILLM/
   abstract: "Lifelong Multi-Agent Path Finding (LMAPF) repeatedly finds collision-free paths for multiple agents that are continually assigned new goals when they reach current ones. Recently, this field has embraced learning-based methods, which reactively generate single-step actions based on individual local observations. However, it is still challenging for them to match the performance of the best search-based algorithms, especially in large-scale settings. This work proposes an imitation-learning-based LMAPF solver that introduces a novel communication module as well as systematic single-step collision resolution and global guidance techniques. Our proposed solver, Scalable Imitation Learning for LMAPF (SILLM), inherits the fast reasoning speed of learning-based methods and the high solution quality of search-based methods with the help of modern GPUs. Across six large-scale maps with up to 10,000 agents and varying obstacle structures, SILLM surpasses the best learning- and search-based baselines, achieving average throughput improvements of 137.7% and 16.0%, respectively. Furthermore, SILLM also beats the winning solution of the 2023 League of Robot Runners, an international LMAPF competition. Finally, we validated SILLM with 10 real robots and 100 virtual robots in a mock warehouse environment."
 
 - key: VeerapaneniICRA25
@@ -383,7 +383,7 @@
   pages: 10229-10236
   year: 2025
   doi: 10.1109/ICRA55743.2025.11128836        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
-  tags: [mapf]
+  tags: [mapf-policy]
   links:
     arXiv: https://arxiv.org/abs/2409.14491
 
@@ -396,7 +396,7 @@
   year: 2025
   award: Spotlight
   doi:  null       # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
-  tags: [mapf]
+  tags: [mamp]
   thumbnail: /files/yoraishaoul/mmd.gif
   site: https://multi-robot-diffusion.github.io/
   links:
@@ -432,7 +432,7 @@
   year: 2025
   thumbnail: /files/yulunzhang/thumbnails/online_ggo_pipeline_pibt.png
   doi: 10.1609/aaai.v39i14.33614
-  tags: [warehouse, envopt]
+  tags: [warehouse, envopt-virtual]
   links:
     arXiv: https://arxiv.org/abs/2411.16506
     Code: https://github.com/zanghz21/OnlineGGO
@@ -450,7 +450,7 @@
   pages: 23360-23368
   year: 2025
   doi: 10.1609/aaai.v39i22.34503
-  tags: [warehouse, mapf]
+  tags: [warehouse, mamp]
   short_version:
     venue: SoCS
     year: 2024
@@ -496,7 +496,7 @@
   pages: 311-320
   year: 2024
   doi: 10.24963/ijcai.2024/35
-  tags: [warehouse, envopt]
+  tags: [warehouse, envopt-virtual]
   thumbnail: /files/yulunzhang/thumbnails/ggo.png
   links:
       arXiv: https://arxiv.org/abs/2402.01446
@@ -529,7 +529,7 @@
   year: 2024
   doi: 10.1609/socs.v17i1.31565
   award: Winner of 2023 League of Robot Runners
-  tags: [mapf, warehouse, envopt]
+  tags: [mapf, warehouse, envopt-virtual]
   thumbnail: /files/hejiang/JiangSoCS24/thumbnail.png
   links:
       arXiv: https://arxiv.org/abs/2404.16162
@@ -547,7 +547,7 @@
   pages: 109--117
   year: 2024
   doi: 10.1609/socs.v17i1.31548
-  tags: [arm]
+  tags: [arm, mamp]
   thumbnail: /files/yoraishaoul/gencbs.gif
   links:
       arXiv: https://arxiv.org/abs/2405.01772
@@ -590,7 +590,7 @@
   pages: 623-632
   year: 2024
   doi: 10.1609/icaps.v34i1.31525
-  tags: [mapf]
+  tags: [warehouse, mapf]
   links:
     Benchmark page: http://mapf.info/index.php/Main/Benchmarks
 
@@ -602,7 +602,7 @@
   pages: 597-606
   year: 2024
   doi: 10.1609/icaps.v34i1.31522
-  tags: [mapf]
+  tags: [mapf-policy]
   links:
     arXiv: https://arxiv.org/abs/2403.20300
 
@@ -617,7 +617,7 @@
   award: Best Student Paper
   thumbnail: /files/yoraishaoul/mramp.gif
   site: https://x-cbs.github.io/
-  tags: [arm]
+  tags: [arm, mamp]
   links:
     arXiv: https://arxiv.org/abs/2404.00143
   abstract: "An exciting frontier in robotic manipulation is the use of multiple arms at once. However, planning concurrent motions is a challenging task using current methods. The high-dimensional composite state space renders many well-known motion planning algorithms intractable. Recently, Multi-Agent Path-Finding (MAPF) algorithms have shown promise in discrete 2D domains, providing rigorous guarantees. However, widely used conflict-based methods in MAPF assume an efficient single-agent motion planner. This poses challenges in adapting them to manipulation cases where this assumption does not hold, due to the high dimensionality of configuration spaces and the computational bottlenecks associated with collision checking. To this end, we propose an approach for accelerating conflict-based search algorithms by leveraging their repetitive and incremental nature -- making them tractable for use in complex scenarios involving multi-arm coordination in obstacle-laden environments. We show that our method preserves completeness and bounded sub-optimality guarantees, and demonstrate its practical efficacy through a set of experiments with up to 10 robotic arms."
@@ -644,7 +644,7 @@
   pages: 3021-3028
   year: 2024
   doi: 10.1109/LRA.2024.3363543
-  tags: [mapf, traffic]
+  tags: [traffic, mamp]
   links:
     arXiv: https://arxiv.org/abs/2311.14145
     Code: https://github.com/JingtianYan/PSB-RAL
@@ -653,6 +653,7 @@
 - key: SuAAAI24
   title: "Bidirectional Temporal Plan Graph: Enabling Switchable Passing Orders for More Efficient Multi-Agent Path Finding Plan Execution"
   authors: [Yifan Su, Rishi Veerapaneni, Jiaoyang Li]
+  award: Oral
   venue: AAAI
   pages: 17559-17566
   year: 2024
@@ -686,7 +687,7 @@
   pages: 57212-57225
   year: 2023
   publisher: https://papers.nips.cc/paper_files/paper/2023/hash/b2fbf1c9bc92e7ef2f6cab2e8a3e09af-Abstract-Conference.html
-  tags: [warehouse, envopt]
+  tags: [warehouse, envopt-physical]
   thumbnail: /files/yulunzhang/thumbnails/nca_process.gif
   links:
     arXiv: https://arxiv.org/abs/2310.18622
@@ -736,7 +737,7 @@
   pages: 5503-5511
   year: 2023
   doi: 10.24963/ijcai.2023/611
-  tags: [warehouse, envopt]
+  tags: [warehouse, envopt-physical]
   thumbnail: /files/yulunzhang/thumbnails/dsage-map.gif
   links:
     arXiv: https://arxiv.org/abs/2305.06436
@@ -806,7 +807,7 @@
   pages: 11578-11585
   year: 2023
   doi: 10.1609/aaai.v37i10.26368
-  tags: [traffic]
+  tags: [traffic, mamp]
   links:
     Code: https://github.com/theanhhoang/AIM
     Talk: https://underline.io/lecture/67972-intersection-coordination-with-priority-based-search-for-autonomous-vehicles
@@ -845,6 +846,7 @@
   pages: 190-198
   year: 2022
   doi: 10.1609/socs.v15i1.21767
+  tags: [warehouse, mamp]
 
 - key: ZhangSoCS22
   title: Learning a Priority Ordering for Prioritized Planning in Multi-Agent Path Finding
@@ -861,6 +863,7 @@
   pages: 38-46
   year: 2022
   doi: 10.1609/socs.v15i1.21750
+  tags: [mamp]
   links:
     Code: https://github.com/nobodyczcz/Lazy-Train-and-K-CBS
 
@@ -871,6 +874,7 @@
   pages: 249-253
   year: 2022
   doi: 10.1609/socs.v15i1.21776
+  tags: [mamp]
 
 - key: ZhongICRA22
   title: Optimal and Bounded-Suboptimal Multi-Goal Task Assignment and Path Finding
@@ -933,6 +937,7 @@
   year: 2022
   eprint: arXiv:2203.02475
   thumbnail: /files/jiaoyangli/thumbnails/Chen22.gif
+  tags: [mamp, arm]
   links:
     arXiv: https://arxiv.org/abs/2203.02475
   abstract: Multi-robot assembly systems are becoming increasingly appealing in manufacturing due to their ability to automatically, flexibly, and quickly construct desired structural designs. However, effectively planning for these systems in a manner that ensures each robot is simultaneously productive, and not idle, is challenging due to (1) the close proximity that the robots must operate in to manipulate the structure and (2) the inherent structural partial orderings on when each part can be installed. In this paper, we present a task and motion planning framework that jointly plans safe, low-makespan plans for a team of robots to assemble complex spatial structures. Our framework takes a hierarchical approach that, at the high level, uses Mixed-integer Linear Programs to compute an abstract plan comprised of an allocation of robots to tasks subject to precedence constraints and, at the low level, builds on a state-of-the-art algorithm for Multi-Agent Path Finding to plan collision-free robot motions that realize this abstract plan. Critical to our approach is the inclusion of certain collision constraints and movement durations during high-level planning, which better informs the search for abstract plans that are likely to be both feasible and low-makespan while keeping the search tractable. We demonstrate our planning system on several challenging assembly domains with several (sometimes heterogeneous) robots with grippers or suction plates for assembling structures with up to 23 objects involving Lego bricks, bars, plates, or irregularly shaped blocks.
@@ -1029,6 +1034,7 @@
   pages: 11237-11245
   year: 2021
   doi: 10.1609/aaai.v35i13.17340
+  tags: [mamp]
   links:
     Code: https://github.com/jkchengh/s2m2
     Talk: https://slideslive.com/38948396/scalable-and-safe-multiagent-motion-planning-with-nonlinear-dynamics-and-bounded-disturbances?ref=account-79851-presentations
@@ -1194,10 +1200,10 @@
   year: 2020
   doi: 10.1609/aaai.v34i09.7072
   links:
-    project webpage: http://modelai.gettysburg.edu/2020/mapf/
+    Project webpage: http://modelai.gettysburg.edu/2020/mapf/
 
 - key: SurynekPRIMA20
-  title: utex Propagation for SAT-based Multi-Agent Path Finding
+  title: Mutex Propagation for SAT-based Multi-Agent Path Finding
   authors: [Pavel Surynek, Jiaoyang Li, Han Zhang, T. K. Satish Kumar, Sven Koenig]
   venue: PRIMA
   pages: 248-258
@@ -1293,6 +1299,7 @@
   pages: 7627-7634
   year: 2019
   doi: 10.1609/aaai.v33i01.33017627
+  tags: [mamp]
   links:
     Poster: /files/posters/large-agent-poster.pdf
     Slides: /files/slides/large-agent-slides.pdf

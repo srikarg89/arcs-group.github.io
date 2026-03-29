@@ -185,9 +185,15 @@ decentralized (e.g. each agent running its own policy and communicating with a s
 fast (just the time required for a neural network inference), and 
 result in efficient paths.
 
-[1] [Collision sheilding for learning-based MAPF](/publications/VeerapaneniICAPS24),
-[2] [Imitation learning for MAPF](/publications/VeerapaneniICRA25), and
-[3] [Imitation learning for large-scale lifelong MAPF](/publications/JiangICRA25).
+{% assign target_tag = "mapf-policy" %}
+<details style="margin-top: 0; margin-bottom: 0;">
+    <summary style="color: #666; font-size: 1.2em; margin-bottom: 10px;"><strong>Relevant publications</strong></summary>
+    {% for pub in site.data.pubs %}
+        {% if pub.tags contains target_tag %}
+            {% include pub-thumbnail.html %}
+        {% endif %}
+    {% endfor %}
+</details> 
 
 <div style="float: right;">
     <button onclick="location.href='/research'" type="button">Back to the Research page</button>

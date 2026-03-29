@@ -114,14 +114,15 @@ This new direction raises several core research challenges:
 </div>
 <div style="clear:both;"></div>
 
-{% assign target_ids = "ZhangIJCAI23,ZhangNeurIPS23" | split: "," %}
+{% assign target_tag = "envopt-physical" %}
 <details style="margin-top: 0; margin-bottom: 0;">
-    <summary style="color: #666;"><strong>Relevant publications</strong></summary>
-    {% for id in target_ids %}
-        {% assign pub = site.data.pubs | where: "key", id | first %}
-        {% include pub-thumbnail.html %}
+    <summary style="color: #666; font-size: 1.2em; margin-bottom: 10px;"><strong>Relevant publications</strong></summary>
+    {% for pub in site.data.pubs %}
+        {% if pub.tags contains target_tag %}
+            {% include pub-thumbnail.html %}
+        {% endif %}
     {% endfor %}
-</details>
+</details> 
 
 ---------------------
 
@@ -183,14 +184,15 @@ this virtual layer can significantly reduce traffic congestion and improve overa
     </p>
 </div>
 
-{% assign target_ids = "ZhangMRS25,ZangAAAI25,JiangICRA25,ZhangIJCAI24,JiangSoCS24,ZhangNeurIPS23,ZhangIJCAI23" | split: "," %}
+{% assign target_tag = "envopt-virtual" %}
 <details style="margin-top: 0; margin-bottom: 0;">
-    <summary style="color: #666;"><strong>Relevant publications</strong></summary>
-    {% for id in target_ids %}
-        {% assign pub = site.data.pubs | where: "key", id | first %}
-        {% include pub-thumbnail.html %}
+    <summary style="color: #666; font-size: 1.2em; margin-bottom: 10px;"><strong>Relevant publications</strong></summary>
+    {% for pub in site.data.pubs %}
+        {% if pub.tags contains target_tag %}
+            {% include pub-thumbnail.html %}
+        {% endif %}
     {% endfor %}
-</details>
+</details> 
 
 <div style="float: right;">
     <button onclick="location.href='/research'" type="button">Back to the Research page</button>

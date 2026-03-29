@@ -45,7 +45,7 @@ The challenge is how to build such graphs and handle agents with different kinem
 
 {% assign target_ids = "ChenSoCS22,Chen22,ChenAAAI21robust,LiAAAI19large" | split: "," %}
 <details style="margin-top: 0; margin-bottom: 0;">
-    <summary style="color: #666;"><strong>Relevant publications</strong></summary>
+    <summary style="color: #666; font-size: 1.2em; margin-bottom: 10px;"><strong>Relevant publications</strong></summary>
     {% for id in target_ids %}
         {% assign pub = site.data.pubs | where: "key", id | first %}
         {% include pub-thumbnail.html %}
@@ -71,7 +71,7 @@ We have developed MAPF-based MAMP planners that rely on the following types of s
 
 {% assign target_ids = "ShaoulICLR25,WangAAAI25,YanAAAI25,YanRAL24,ShaoulICAPS24,ShaoulSoCS24,ChenAAAI21s2m2," | split: "," %}
 <details style="margin-top: 0; margin-bottom: 0;">
-    <summary style="color: #666;"><strong>Relevant publications</strong></summary>
+    <summary style="color: #666; font-size: 1.2em; margin-bottom: 10px;"><strong>Relevant publications</strong></summary>
     {% for id in target_ids %}
         {% assign pub = site.data.pubs | where: "key", id | first %}
         {% include pub-thumbnail.html %}
@@ -92,7 +92,7 @@ in order to reduce the system cost, increase the robustness and efficiency of th
 
 {% assign target_ids = "LiAAMAS20" | split: "," %}
 <details style="margin-top: 0; margin-bottom: 0;">
-    <summary style="color: #666;"><strong>Relevant publications</strong></summary>
+    <summary style="color: #666; font-size: 1.2em; margin-bottom: 10px;"><strong>Relevant publications</strong></summary>
     {% for id in target_ids %}
         {% assign pub = site.data.pubs | where: "key", id | first %}
         {% include pub-thumbnail.html %}

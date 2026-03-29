@@ -34,14 +34,15 @@ This perspective allows us to integrate MAPF algorithms with different single-ag
 enabling MAPF to address a broader class of Multi-Agent Motion Planning problems that incorporate robot dynamics.
 See more details [here](/mamp/).
 
-{% assign target_ids = "YanAAAI25,YanRAL24" | split: "," %}
+{% assign target_tag = "mamp" %}
 <details style="margin-top: 0; margin-bottom: 0;">
-    <summary style="color: #666;"><strong>Relevant publications</strong></summary>
-    {% for id in target_ids %}
-        {% assign pub = site.data.pubs | where: "key", id | first %}
-        {% include pub-thumbnail.html %}
+    <summary style="color: #666; font-size: 1.2em; margin-bottom: 10px;"><strong>Relevant publications</strong></summary>
+    {% for pub in site.data.pubs %}
+        {% if pub.tags contains target_tag %}
+            {% include pub-thumbnail.html %}
+        {% endif %}
     {% endfor %}
-</details>
+</details> 
 
 ---------------------
 
@@ -99,17 +100,15 @@ whose modification will not lead to deadlocks.
 Moreover, this execution framework can be applied to various robotic systems, 
 such as mobile robots as well as robotic arms.
 
-{% assign target_ids = "Yan25,JiangAAAI25,HuangRSS25,SuAAAI24,FengICAPS24" | split: "," %}
+{% assign target_tag = "execution" %}
 <details style="margin-top: 0; margin-bottom: 0;">
-    <summary style="color: #666;"><strong>Relevant publications</strong></summary>
-    {% for id in target_ids %}
-        {% assign pub = site.data.pubs | where: "key", id | first %}
-        {% if pub == nil %}
-            {% assign pub = site.data.preprints | where: "key", id | first %}
+    <summary style="color: #666; font-size: 1.2em; margin-bottom: 10px;"><strong>Relevant publications</strong></summary>
+    {% for pub in site.data.pubs %}
+        {% if pub.tags contains target_tag %}
+            {% include pub-thumbnail.html %}
         {% endif %}
-        {% include pub-thumbnail.html %}
     {% endfor %}
-</details>
+</details> 
 
 [//]: # (## Scalable Physical-Based Testbed for Evaluating MAPF Plans)
 
