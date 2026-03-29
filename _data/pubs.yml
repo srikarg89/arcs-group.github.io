@@ -15,7 +15,7 @@
 #  award: null
 #  doi: null        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
 #  publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi]
-#  tags: [mapf, warehouse, arm, traffic, execution]
+#  tags: [mapf, warehouse, arm, traffic, execution, envopt]
 #  links:   # You can add additional links not listed below
 #    arXiv: null
 #    Code: null
@@ -30,8 +30,30 @@
 #  abstract: null
 
 ############### 2026 ##################
+- key: VeerapaneniICRA26
+  title: "Conflict-Based Search as a Protocol: A Multi-Agent Motion Planning Protocol for Heterogeneous Agents, Solvers, and Independent Tasks"
+  site: https://rishi-v.github.io/CBS-Protocol/  # project page
+  authors: [Rishi Veerapaneni, Ho Kwan Alvin Tang, Yidai Cen, Haodong He, Sophia Zhao, Viraj Shah, Ziteng Ji, Gabriel Olin, Jon Arrizabalaga, Yorai Shaoul, Jiaoyang Li, Maxim Likhachev]
+  equal_contributions: [Ho Kwan Alvin Tang, Yidai Cen, Haodong He, Sophia Zhao, Viraj Shah, Ziteng Ji]
+  venue: ICRA
+  volume: null
+  number: null
+  pages: null
+  year: 2026
+  thumbnail: null  # Save to /files/[your-folder]/
+  award: null
+  doi: null        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
+  publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi]
+  tags: [mapf, warehouse]
+  links:   # You can add additional links not listed below
+    arXiv: https://arxiv.org/abs/2510.00425
+    Code: null
+    Poster: null
+    Slides: null
+    Talk: null
+  abstract: null
 
-- key: Qian2026qdmapper
+- key: QianAAMAS26
   title: "QD-MAPPER: A Quality Diversity Framework to Automatically Evaluate Multi-Agent Path Finding Algorithms in Diverse Maps"
   site: https://airtclick.github.io/qdmapper/  # project page
   authors: [Cheng Qian, Yulun Zhang, Varun Bhatt, Matthew C. Fontaine, Stefanos Nikolaidis, Jiaoyang Li]
@@ -59,7 +81,45 @@
   tags: [mapf]
   abstract: We use the Quality Diversity (QD) algorithm with Neural Cellular Automata (NCA) to generate benchmark maps for Multi-Agent Path Finding (MAPF) algorithms. Previously, MAPF algorithms are tested using fixed, human-designed benchmark maps. However, such fixed benchmark maps have several problems. First, these maps may not cover all the potential failure scenarios for the algorithms. Second, when comparing different algorithms, fixed benchmark maps may introduce bias leading to unfair comparisons between algorithms. Third, since researchers test new algorithms on a small set of fixed benchmark maps, the design of the algorithms may overfit to the small set of maps. In this work, we take advantage of the QD algorithm to (1) generate maps with patterns to comprehensively understand the performance of MAPF algorithms, (2) be able to make fair comparisons between two MAPF algorithms, providing further information on the selection between two algorithms and on the design of the algorithms. Empirically, we employ this technique to generate diverse benchmark maps to evaluate and compare the behavior of different types of MAPF algorithms, including search-based, priority-based, rule-based, and learning-based algorithms. Through both single-algorithm experiments and comparisons between algorithms, we identify patterns where each algorithm excels and detect disparities in runtime or success rates between different algorithms.
 
+- key: SuAAAI26
+  title: "BTPG-max: Achieving Local Maximal Bidirectional Pairs for Bidirectional Temporal Plan Graphs"
+  site: null  # project page
+  authors: [Yifan Su, Rishi Veerapaneni, Jiaoyang Li]
+  venue: AAAI
+  pages: 29687-29695
+  year: 2026
+  thumbnail: null  # Save to /files/[your-folder]/
+  award: Oral
+  doi: 10.1609/aaai.v40i35.40213        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
+  publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi]
+  tags: [mapf, warehouse, execution]
+  links:   # You can add additional links not listed below
+    arXiv: https://arxiv.org/abs/2508.04849
+    Code: null
+    Poster: null
+    Slides: null
+    Talk: https://ojs.aaai.org/index.php/AAAI/article/view/40213/48009
+  abstract: Multi-Agent Path Finding (MAPF) requires computing collision-free paths for multiple agents in a shared environment. Most MAPF planners assume that each agent reaches a specific location at a specific timestep, but this is infeasible to directly follow on real systems where delays often occur. To address collisions caused by agents deviating due to delays, the Temporal Plan Graph (TPG) was proposed, which converts a MAPF time-dependent solution into a timeindependent solution with a set of inter-agent dependencies. Recently, a Bidirectional TPG (BTPG) was proposed which relaxed some dependencies into “bidirectional pairs” and improved efficiency of agents executing their MAPF solution with delays. Our work improves upon this prior work by designing an algorithm, BPTG-max, that finds more bidirectional pairs. Our main theoretical contribution is in designing the BTPG-max algorithm that is locally maximal, i.e., it constructs a BTPG where no additional bidirectional pairs can be added. We also show how, in practice, BTPG-max leads to BTPGs with significantly more bidirectional edges, superior anytime behavior, and improved robustness to delays.
 
+- key: ZhangAAAI26
+  title: "Dynamic Agent Grouping ECBS: Scaling Windowed Multi-Agent Path Finding with Completeness Guarantees"
+  site: null  # project page
+  authors: [Tiannan Zhang, Rishi Veerapaneni, Shao-Hung Chan, Jiaoyang Li, Maxim Likhachev]
+  venue: AAAI
+  pages: 29911-29920
+  year: 2026
+  thumbnail: null  # Save to /files/[your-folder]/
+  award: Oral
+  doi: 10.1609/aaai.v40i35.40238        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
+  publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi]
+  tags: [mapf, warehouse]
+  links:   # You can add additional links not listed below
+    arXiv: https://arxiv.org/abs/2509.15381
+    Code: null
+    Poster: null
+    Slides: null
+    Talk: https://ojs.aaai.org/index.php/AAAI/article/view/40238/49479
+  abstract: Multi-Agent Path Finding (MAPF) is the problem of finding a set of collision-free paths for a team of agents. Although several MAPF methods that solve full-horizon MAPF have completeness guarantees, very few MAPF methods that plan partial paths have completeness guarantees. Recent work introduced the Windowed Complete MAPF (WinC-MAPF) framework, which shows how windowed optimal MAPF solvers (e.g., SS-CBS) can use heuristic updates and disjoint agent groups to maintain completeness even when planning partial paths. A core limitation of WinC-MAPF is that it requires optimal MAPF solvers. Our main contribution is to extend WinC-MAPF by showing how we can use a bounded suboptimal solver while maintaining completeness. In particular, we design Dynamic Agent Grouping ECBS (DAG-ECBS) which dynamically creates and plans agent groups while maintaining that each agent group solution is bounded suboptimal. We prove how DAG-ECBS can maintain completeness in the WinC-MAPF framework and can improve scalability compared to windowed ECBS which does not have completeness guarantees. More broadly, our work serves as a blueprint for designing more MAPF methods that can use the WinC-MAPF framework.
 
 ############### 2025 ##################
 - key: ZhangMRS25
