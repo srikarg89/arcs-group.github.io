@@ -30,6 +30,27 @@
 #  abstract: null
 
 ############### 2026 ##################
+- key: GouruICAPS26
+  title: "Scalable Algorithms with Provable Optimality Bounds for the Multiple Watchman Route Problem"
+  site: https://mwrp-cp3.github.io/  # project page
+  authors: [Srikar Gouru, Ariel Felner, Jiaoyang Li]
+  venue: ICAPS
+  volume: null
+  number: null
+  pages: null
+  year: 2026
+  thumbnail: /files/srikargouru/mwrp.gif  # Save to /files/[your-folder]/
+  award: null
+  doi: null        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
+  publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi]
+  links:   # You can add additional links not listed below
+    arXiv: https://arxiv.org/abs/2604.15610
+    Code: https://github.com/srikarg89/MWRP-CP3
+    Poster: null
+    Slides: null
+    Talk: null
+  abstract: "In this paper, we tackle the Multiple Watchman Route Problem (MWRP), which aims to find a set of paths that M watchmen can follow such that every location on the map can be seen by at least one watchman. First, we propose multiple methods to reduce the state space over which a search needs to be conducted by pruning map areas that are guaranteed to be seen en route to other areas. Next, we introduce MWRP-CP3, an efficient optimal planner that combines these methods with techniques that improve the quality and calculation time of existing heuristics. We present several suboptimal algorithms with bounds on solution quality, including MxWA*, a general variant of weighted A* for makespan problems. We also present anytime variations of our suboptimal algorithms, as well as techniques to improve an existing suboptimal solution by solving multiple decomposed sub-problems. We show that MWRP-CP3 can reduce the search space by more than 95% and runs more than 200x faster than existing optimal algorithms on 2D grid maps. We also show that our suboptimal algorithms solve maps 3x larger than those solvable by MWRP-CP3. See https://mwrp-cp3.github.io/ for the open source codebase and video demonstrations."
+
 - key: VeerapaneniICRA26
   title: "Conflict-Based Search as a Protocol: A Multi-Agent Motion Planning Protocol for Heterogeneous Agents, Solvers, and Independent Tasks"
   site: https://rishi-v.github.io/CBS-Protocol/  # project page
